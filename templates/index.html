@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Halo Sampit</title>
+</head>
+<body>
+    <h1>Halo Sampit!</h1>
+
+    <!-- Menampilkan salam waktu -->
+    <h3>{{ salam }}!</h3>
+
+    <!-- Menampilkan tanggal dan jam server -->
+    <p>Waktu Server saat ini: <strong>{{ time }}</strong></p>
+
+    <form method="POST">
+        <label for="nama">Masukkan Nama Anda:</label>
+        <input type="text" id="nama" name="nama" required>
+        <button type="submit">Kirim</button>
+    </form>
+
+    {% if nama %}
+        <h2>Halo, {{ nama }}!</h2>
+    {% endif %}
+</body>
+</html>
